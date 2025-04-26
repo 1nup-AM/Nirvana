@@ -110,9 +110,10 @@ const Portfolio = () => {
     : portfolioItems.filter(item => item.category === selectedCategory);
 
   const breakpointColumns = {
-    default: 3,
-    1100: 2,
-    700: 1
+    default: 4,
+    1100: 3,
+    700: 2,
+    500:1,
   };
 
   return (
