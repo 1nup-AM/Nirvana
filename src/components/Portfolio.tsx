@@ -8,19 +8,19 @@ const portfolioItems = [
   {
     id: 1,
     category: 'Fashion',
-    image: 'public/Fashion/Z50_8718-3.jpg',
+    image: '/Fashion/Z50_8718-3.jpg',
     title: 'Premium Luxury',
   },
   {
     id: 2,
     category: 'Fashion',
-    image: 'public/Fashion/Z50_9537-2.jpg',
+    image: '/Fashion/Z50_9537-2.jpg',
     title: 'Premium Luxury',
   },
   {
     id: 3,
     category: 'Fashion',
-    image: 'public/Fashion/Z50_9467-2.jpg',
+    image: '/Fashion/Z50_9467-2.jpg',
     title: 'Premium Luxury',
   },
   // {
@@ -41,13 +41,13 @@ const portfolioItems = [
   {
     id: 6,
     category: 'Product',
-    image: 'public/Product/shot4.png',
+    image: '/Product/shot4.png',
     title: 'Timeless Elegance',
   },
   {
     id: 7,
     category: 'Product',
-    image: 'public/Product/almond.mp4',
+    image: '/Product/almond.mp4',
     title: 'Necromantic',
   },
   // {
@@ -71,46 +71,46 @@ const portfolioItems = [
   {
     id: 11,
     category: 'Brand',
-    image: 'public/Brand/1709313030770.jpg',
+    image: '/Brand/1709313030770.jpg',
     title: 'Minimal Workspace',
   },
   ////////////////////////////////////////////////////////
   {
     id: 12,
     category: 'Brand',
-    image: 'public/Brand/1711028885117.jpg',
+    image: '/Brand/1711028885117.jpg',
     title: 'Minimal Workspace',
   },{
     id: 13,
     category: 'Brand',
-    image: 'public/Brand/1710875419228.jpg',
+    image: '/Brand/1710875419228.jpg',
     title: 'Minimal Workspace',
   },{
     id: 14,
     category: 'Brand',
-    image: 'public/Brand/1710534508842.jpg',
+    image: '/Brand/1710534508842.jpg',
     title: 'Minimal Workspace',
   },{
     id: 15,
     category: 'Brand',
-    image: 'public/Brand/1705566827784.jpg',
+    image: '/Brand/1705566827784.jpg',
     title: 'Minimal Workspace',
   },{
     id: 16,
     category: 'Brand',
-    image: 'public/Brand/shot3.png',
+    image: '/Brand/shot3.png',
     title: 'Minimal Workspace',
   },
   {
     id: 17,
     category: 'Brand',
-    image: 'public/Brand/shot2.png',
+    image: '/Brand/shot2.png',
     title: 'Minimal Workspace',
   },
   {
     id: 18,
     category: 'Brand',
-    image: 'public/Brand/shot1.png',
+    image: '/Brand/shot1.png',
     title: 'Minimal Workspace',
   },
   
@@ -120,7 +120,7 @@ const portfolioItems = [
   {
     id: 19,
     category: 'Gallery',
-    image: 'public/Gallery/1707659296759.jpg',
+    image: '/Gallery/1707659296759.jpg',
     title: 'Minimal Workspace',
   },
   {
@@ -134,7 +134,7 @@ const portfolioItems = [
   {
     id: 21,
     category: 'Gallery',
-    image: 'public/Gallery/VN20240307_214525.mp4',
+    image: '/Gallery/VN20240307_214525.mp4',
     title: 'Creative Space',
   },
   
@@ -142,13 +142,13 @@ const portfolioItems = [
   {
     id: 22,
     category: 'Gallery',
-    image: 'public/Gallery/1698652147277.jpg',
+    image: '/Gallery/1698652147277.jpg',
     title: 'Office Life',
   },
   {
     id: 23,
     category: 'Gallery',
-    image: 'public/Gallery/1711730853565.jpg',
+    image: '/Gallery/1711730853565.jpg',
     title: 'Office Life',
   },
   {
@@ -160,43 +160,43 @@ const portfolioItems = [
   {
     id: 25,
     category: 'Gallery',
-    image: 'public/Gallery/IMG_20240107_030613.jpg',
+    image: '/Gallery/IMG_20240107_030613.jpg',
     title: 'Office Life',
   },
   {
     id: 26,
     category: 'Gallery',
-    image: 'public/Gallery/1705938528551 (1).jpg',
+    image: '/Gallery/1705938528551 (1).jpg',
     title: 'Office Life',
   },
   {
     id: 27,
     category: 'Gallery',
-    image: 'public/Gallery/_UR03329.JPG',
+    image: '/Gallery/_UR03329.JPG',
     title: 'Office Life',
   },
   {
     id: 28,
     category: 'Gallery',
-    image: 'public/Gallery/_UR03300.JPG',
+    image: '/Gallery/_UR03300.JPG',
     title: 'Office Life',
   },
   {
     id: 29,
     category: 'Gallery',
-    image: 'public/Gallery/_UR03306.JPG',
+    image: '/Gallery/_UR03306.JPG',
     title: 'Office Life',
   },
   {
     id: 30,
     category: 'Gallery',
-    image: 'public/Gallery/_UR03217.JPG',
+    image: '/Gallery/_UR03217.JPG',
     title: 'Office Life',
   },
   {
     id: 32,
     category: 'Gallery',
-    image: 'public/Gallery/_UR03207.JPG',
+    image: '/Gallery/_UR03207.JPG',
     title: 'Office Life',
   },
 ];
