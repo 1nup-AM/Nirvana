@@ -2,96 +2,201 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Masonry from 'react-masonry-css';
 import { useState } from 'react';
+// import { Rotate3D } from 'lucide-react';
 
 const portfolioItems = [
   {
     id: 1,
     category: 'Fashion',
-    image: 'shot1.png',
+    image: 'public/Fashion/Z50_8718-3.jpg',
     title: 'Premium Luxury',
   },
   {
     id: 2,
-    category: 'Product',
-    image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80',
-    title: 'Timeless Elegance',
+    category: 'Fashion',
+    image: 'public/Fashion/Z50_9537-2.jpg',
+    title: 'Premium Luxury',
   },
   {
     id: 3,
-    category: 'Product',
-    image: 'shot2.png',
-    title: 'Necromantic',
+    category: 'Fashion',
+    image: 'public/Fashion/Z50_9467-2.jpg',
+    title: 'Premium Luxury',
   },
-  {
-    id: 4,
-    category: 'Editorial',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
-    title: 'Minimal Workspace',
-  },
+  // {
+  //   id: 4,
+  //   category: 'Fashion',
+  //   image: 'public/Fashion/DSC_9551.MOV',
+  //   title: 'Premium Luxury',
+  // },
+
   {
     id: 5,
-    category: 'Fashion',
-    image: 'shot5.png',
-    title: 'Neon Noir',
-  },
-  {
-    id: 6,
-    category: 'Product',
-    image: 'shot4.png',
-    title: "Witch's Lullaby",
-  },
-  {
-    id: 7,
-    category: 'Fashion',
-    image: 'shot3.png',
-    title: "Lunaire Nocturne",
-  },
-  {
-    id: 8,
-    category: 'Editorial',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
-    title: 'Minimal Workspace',
-  },
-  {
-    id: 9,
-    category: 'Editorial',
-    image: 'https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?w=800&q=80',
-    title: 'Studio Lighting',
-  },
-  {
-    id: 10,
-    category: 'Product',
-    image: 'https://images.unsplash.com/photo-1503602642458-232111445657?w=800&q=80',
-    title: 'Minimal Product',
-  },
-  {
-    id: 11,
-    category: 'Fashion',
-    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80',
-    title: 'Fashion Editorial',
-  },
-  {
-    id: 12,
-    category: 'Editorial',
-    image: 'https://images.unsplash.com/photo-1554941829-202a0b2403b8?w=800&q=80',
-    title: 'Creative Space',
-  },
-  {
-    id: 13,
-    category: 'Product',
-    image: 'https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=800&q=80',
-    title: 'Watch Collection',
-  },
-  {
-    id: 14,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800&q=80',
     title: 'Summer Collection',
   },
+
+  ////////////////////////////////////////////////
   {
+    id: 6,
+    category: 'Product',
+    image: 'public/Product/shot4.png',
+    title: 'Timeless Elegance',
+  },
+  {
+    id: 7,
+    category: 'Product',
+    image: 'public/Product/almond.mp4',
+    title: 'Necromantic',
+  },
+  // {
+  //   id: 8,
+  //   category: 'Product',
+  //   image: 'public/Product/almond.mp4',
+  //   title: 'Necromantic',
+  // },
+  // {
+  //   id: 9,
+  //   category: 'Product',
+  //   image: 'public/Product/almond.mp4',
+  //   title: 'Necromantic',
+  // },
+  // {
+  //   id: 10,
+  //   category: 'Product',
+  //   image: 'public/Product/almond.mp4',
+  //   title: 'Necromantic',
+  // },
+  {
+    id: 11,
+    category: 'Brand',
+    image: 'public/Brand/1709313030770.jpg',
+    title: 'Minimal Workspace',
+  },
+  ////////////////////////////////////////////////////////
+  {
+    id: 12,
+    category: 'Brand',
+    image: 'public/Brand/1711028885117.jpg',
+    title: 'Minimal Workspace',
+  },{
+    id: 13,
+    category: 'Brand',
+    image: 'public/Brand/1710875419228.jpg',
+    title: 'Minimal Workspace',
+  },{
+    id: 14,
+    category: 'Brand',
+    image: 'public/Brand/1710534508842.jpg',
+    title: 'Minimal Workspace',
+  },{
     id: 15,
-    category: 'Editorial',
+    category: 'Brand',
+    image: 'public/Brand/1705566827784.jpg',
+    title: 'Minimal Workspace',
+  },{
+    id: 16,
+    category: 'Brand',
+    image: 'public/Brand/shot3.png',
+    title: 'Minimal Workspace',
+  },
+  {
+    id: 17,
+    category: 'Brand',
+    image: 'public/Brand/shot2.png',
+    title: 'Minimal Workspace',
+  },
+  {
+    id: 18,
+    category: 'Brand',
+    image: 'public/Brand/shot1.png',
+    title: 'Minimal Workspace',
+  },
+  
+  ////////////////////////////////////////////////
+ 
+
+  {
+    id: 19,
+    category: 'Gallery',
+    image: 'public/Gallery/1707659296759.jpg',
+    title: 'Minimal Workspace',
+  },
+  {
+    id: 20,
+    category: 'Gallery',
+    image: 'https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?w=800&q=80',
+    title: 'Studio Lighting',
+  },
+  
+  
+  {
+    id: 21,
+    category: 'Gallery',
+    image: 'public/Gallery/VN20240307_214525.mp4',
+    title: 'Creative Space',
+  },
+  
+  
+  {
+    id: 22,
+    category: 'Gallery',
+    image: 'public/Gallery/1698652147277.jpg',
+    title: 'Office Life',
+  },
+  {
+    id: 23,
+    category: 'Gallery',
+    image: 'public/Gallery/1711730853565.jpg',
+    title: 'Office Life',
+  },
+  {
+    id: 24,
+    category: 'Gallery',
     image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&q=80',
+    title: 'Office Life',
+  },
+  {
+    id: 25,
+    category: 'Gallery',
+    image: 'public/Gallery/IMG_20240107_030613.jpg',
+    title: 'Office Life',
+  },
+  {
+    id: 26,
+    category: 'Gallery',
+    image: 'public/Gallery/1705938528551 (1).jpg',
+    title: 'Office Life',
+  },
+  {
+    id: 27,
+    category: 'Gallery',
+    image: 'public/Gallery/_UR03329.JPG',
+    title: 'Office Life',
+  },
+  {
+    id: 28,
+    category: 'Gallery',
+    image: 'public/Gallery/_UR03300.JPG',
+    title: 'Office Life',
+  },
+  {
+    id: 29,
+    category: 'Gallery',
+    image: 'public/Gallery/_UR03306.JPG',
+    title: 'Office Life',
+  },
+  {
+    id: 30,
+    category: 'Gallery',
+    image: 'public/Gallery/_UR03217.JPG',
+    title: 'Office Life',
+  },
+  {
+    id: 32,
+    category: 'Gallery',
+    image: 'public/Gallery/_UR03207.JPG',
     title: 'Office Life',
   },
 ];
