@@ -132,8 +132,8 @@ const Hero = () => {
           <span className="hero-underline">NIRVANA X</span>
         </h1>
         <p className="text-xl italic opacity-85 tracking-widest md:text-2xl font-inter max-w-2xl mx-auto px-4">
-          Where product branding meets visual storytelling, creating
-          unforgettable narratives through the lens of innovation.
+          {/* Where product branding meets visual storytelling, creating
+          unforgettable narratives through the lens of innovation. */}
         </p>
       </motion.div>
 
