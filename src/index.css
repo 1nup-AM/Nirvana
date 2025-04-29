@@ -20,7 +20,7 @@
 
 @layer components {
   .nav-link {
-    @apply relative text-white text-lg font-inter transition-all duration-300 ease-custom hover:text-ogilvy-red;
+    @apply relative text-white text-lg font-inter transition-all duration-300 ease-custom hover:text-ogilvy-red hover:scale-125;
   }
 
   /* .nav-link::after {
