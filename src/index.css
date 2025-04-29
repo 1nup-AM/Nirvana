@@ -23,14 +23,14 @@
     @apply relative text-white text-lg font-inter transition-all duration-300 ease-custom hover:text-ogilvy-red;
   }
 
-  .nav-link::after {
+  /* .nav-link::after {
     content: '';
     @apply absolute bottom-0 left-0 w-0 h-0.5 bg-ogilvy-red transition-all duration-300 ease-custom;
   }
 
   .nav-link:hover::after {
     @apply w-full;
-  }
+  } */
 
   .hero-underline {
     @apply relative inline-block;
