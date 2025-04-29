@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Masonry from 'react-masonry-css';
 import { useState } from 'react';
-import { Rotate3D } from 'lucide-react';
+// import { Rotate3D } from 'lucide-react';
 
 const portfolioItems = [
   {
@@ -23,12 +23,12 @@ const portfolioItems = [
     image: 'public/Fashion/Z50_9467-2.jpg',
     title: 'Premium Luxury',
   },
-  {
-    id: 4,
-    category: 'Fashion',
-    image: 'public/Fashion/DSC_9551.MOV',
-    title: 'Premium Luxury',
-  },
+  // {
+  //   id: 4,
+  //   category: 'Fashion',
+  //   image: 'public/Fashion/DSC_9551.MOV',
+  //   title: 'Premium Luxury',
+  // },
 
   {
     id: 5,
