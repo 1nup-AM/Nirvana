@@ -8,19 +8,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'studio@nirvanax.com',
-    link: 'mailto:studio@nirvanax.com'
+    value: 'contact@NirvanaX.in',
+    link: 'mailto:contact@NirvanaX.in'
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+1 (555) 123-4567',
-    link: 'tel:+15551234567'
+    value: '+917571840108',
+    link: 'tel:+917571840108'
   },
   {
     icon: MapPin,
     label: 'Location',
-    value: 'SoHo, New York City',
+    value: 'Sector 150 Noida, India',
     link: 'https://maps.google.com'
   }
 ];
@@ -29,7 +29,7 @@ const socialLinks = [
   {
     icon: Instagram,
     label: 'Instagram',
-    link: 'https://instagram.com'
+    link: 'https://www.instagram.com/nirvanaxofficial?igsh=MTV6eDBpZ3BsYjQyMQ=='
   },
   {
     icon: Twitter,
@@ -39,7 +39,7 @@ const socialLinks = [
   {
     icon: LinkedIn,
     label: 'LinkedIn',
-    link: 'https://linkedin.com'
+    link: 'https://www.linkedin.com/company/nirvana-x/'
   }
 ];
 

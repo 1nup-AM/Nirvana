@@ -69,9 +69,14 @@ const Navigation = () => {
     <>
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-true-black/90 backdrop-blur-sm' : ''}`}>
         <div className="container mx-auto px-6 py-6 flex justify-between items-center">
-          <Link to="/" className="text-3xl font-playfair text-white z-50">
-            NIRVANA X
-          </Link>
+        <Link
+  to="/"
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+  className="text-3xl font-playfair text-white z-50 px-4 py-2 rounded-lg focus:outline-none"
+>
+  NIRVANA X
+</Link>
+
           <button 
             className="text-white z-50"
             onClick={() => setIsOpen(!isOpen)}
