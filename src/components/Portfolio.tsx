@@ -44,12 +44,12 @@ const portfolioItems = [
     image: '/Product/shot4.png',
     title: 'Timeless Elegance',
   },
-  {
-    id: 7,
-    category: 'Product',
-    image: '/Product/almond.mp4',
-    title: 'Necromantic',
-  },
+  // {
+  //   id: 7,
+  //   category: 'Product',
+  //   image: '/Product/almond.mp4',
+  //   title: 'Necromantic',
+  // },
   // {
   //   id: 8,
   //   category: 'Product',
@@ -131,12 +131,12 @@ const portfolioItems = [
   },
   
   
-  {
-    id: 21,
-    category: 'Gallery',
-    image: '/Gallery/VN20240307_214525.mp4',
-    title: 'Creative Space',
-  },
+  // {
+  //   id: 21,
+  //   category: 'Gallery',
+  //   image: '/Gallery/VN20240307_214525.mp4',
+  //   title: 'Creative Space',
+  // },
   
   
   {
