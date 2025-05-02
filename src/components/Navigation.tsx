@@ -1,7 +1,19 @@
-import { useState, useEffect } from 'react';
-import { X, Instagram, Twitter, Linkedin, Mail, Image, Users, Info, BookOpen, Contact, AlignLeft } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import {
+  X,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Mail,
+  Image,
+  Users,
+  Info,
+  BookOpen,
+  Contact,
+  AlignLeft,
+} from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface SocialLink {
   icon: React.ElementType;
@@ -26,62 +38,73 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
   }, [isOpen]);
 
   const handleNavClick = (sectionId: string) => {
     setIsOpen(false);
-    if (location.pathname !== '/') {
+    if (location.pathname !== "/") {
       window.location.href = `/#${sectionId}`;
     } else {
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
 
   const socialLinks: SocialLink[] = [
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:contact@nirvanax.com', label: 'Email' },
+    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:contact@nirvanax.com", label: "Email" },
   ];
 
   const navLinks: NavLink[] = [
-    { label: 'Portfolio', id: 'portfolio', icon: Image },
-    { label: 'Team', id: 'team', icon: Users },
-    { label: 'About', id: 'about', icon: Info },
-    { label: 'Journal', path: '/journal', icon: BookOpen },
-    { label: 'Contact', id: 'contact', icon: Contact },
+    { label: "Portfolio", id: "portfolio", icon: Image },
+    { label: "Team", id: "team", icon: Users },
+    { label: "About", id: "about", icon: Info },
+    { label: "Journal", path: "/journal", icon: BookOpen },
+    { label: "Contact", id: "contact", icon: Contact },
   ];
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-true-black/90 backdrop-blur-sm' : ''}`}>
-        <div className="container mx-auto px-6 py-6 flex justify-between items-center">
-        <Link
-  to="/"
-  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-  className="text-3xl font-playfair text-white z-50 px-4 py-2 rounded-lg focus:outline-none"
->
-  NIRVANA X
-</Link>
-
-          <button 
-            className="text-white z-50"
-            onClick={() => setIsOpen(!isOpen)}
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+          isScrolled
+            ? "bg-true-black/90 backdrop-blur-md py-2 shadow-lg"
+            : "py-4"
+        }`}
+      >
+        <div className="container mx-auto px-3 flex justify-between items-center max-w-7xl">
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="text-3xl font-playfair font-bold text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2"
           >
-            {isOpen ? <X size={34} /> : <AlignLeft size={34} />}
+            NIRVANA<span className="text-ogilvy-red">X</span>
+          </Link>
+
+          <button
+            className="text-white z-50 p-2 rounded-full hover:bg-slate-800/50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-ogilvy-red/50"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
+            {isOpen ? (
+              <X size={32} className="text-ogilvy-red" />
+            ) : (
+              <AlignLeft size={32} />
+            )}
           </button>
         </div>
       </nav>
@@ -95,62 +118,67 @@ const Navigation = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-true-black/95 backdrop-blur-sm z-40"
+              className="fixed inset-0 bg-true-black/95 backdrop-blur-lg z-40"
               onClick={() => setIsOpen(false)}
             />
 
-            {/* Left Panel - Social Links */}
+            {/* Navigation Panel - Now on the right side */}
             <motion.div
-              initial={{ x: -300, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -300, opacity: 0 }}
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed top-0 left-0 h-full w-1/2 flex items-center justify-center z-40"
+              className="fixed top-0 right-0 h-full w-full md:w-1/2 lg:w-2/5 xl:w-1/3 bg-true-black/90 backdrop-blur-sm z-40 flex flex-col justify-center px-12 border-l border-slate-800/50 pt-20"
             >
-              <div className="space-y-10">
-              {navLinks.map((link, index) => {
+              <div className="space-y-8 mb-16">
+                {navLinks.map((link, index) => {
                   const Icon = link.icon;
                   return (
                     <motion.div
                       key={link.label}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 + 0.3 }}
                     >
                       {link.path ? (
                         <Link
                           to={link.path}
-                          className="nav-link text-2xl lg:text-3xl font-playfair flex items-center gap-4"
+                          className="group flex items-center gap-6 py-4"
                           onClick={() => setIsOpen(false)}
                         >
-                          <Icon size={24} className="text-ogilvy-red" />
-                          {link.label}
+                          <div className="p-3 bg-slate-800/50 rounded-lg group-hover:bg-ogilvy-red/20 transition-colors duration-500">
+                            <Icon size={24} className="text-ogilvy-red" />
+                          </div>
+                          <span className="text-2xl lg:text-3xl font-playfair text-white group-hover:text-ogilvy-red transition-colors duration-500">
+                            {link.label}
+                          </span>
                         </Link>
                       ) : (
                         <button
                           onClick={() => handleNavClick(link.id!)}
-                          className="nav-link text-2xl lg:text-3xl font-playfair flex items-center gap-4"
+                          className="group flex items-center gap-6 py-4 w-full text-left"
                         >
-                          <Icon size={24} className="text-ogilvy-red" />
-                          {link.label}
+                          <div className="p-3 bg-slate-800/50 rounded-lg group-hover:bg-ogilvy-red/20 transition-colors duration-500">
+                            <Icon size={24} className="text-ogilvy-red" />
+                          </div>
+                          <span className="text-2xl lg:text-3xl font-playfair text-white group-hover:text-ogilvy-red transition-colors duration-500">
+                            {link.label}
+                          </span>
                         </button>
                       )}
                     </motion.div>
                   );
                 })}
               </div>
-            </motion.div>
 
-            {/* Right Panel - Navigation Links */}
-            <motion.div
-              initial={{ x: 300, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 300, opacity: 0 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed top-0 right-0 h-full w-1/2 flex items-center justify-center z-40"
-            >
-              <div className="space-y-10">
-              {socialLinks.map((link) => {
+              {/* Social Links */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+                className="flex gap-6 mt-auto pb-16"
+              >
+                {socialLinks.map((link) => {
                   const Icon = link.icon;
                   return (
                     <motion.a
@@ -158,16 +186,18 @@ const Navigation = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="nav-link flex items-center gap-4 group"
-                      whileHover={{ x: 10 }}
+                      className="p-4 bg-slate-800/50 rounded-full hover:bg-ogilvy-red/20 transition-colors duration-500 group"
+                      whileHover={{ y: -5 }}
                       aria-label={link.label}
                     >
-                      <Icon size={34} className="text-ogilvy-red" />
+                      <Icon
+                        size={24}
+                        className="text-ogilvy-red group-hover:text-white"
+                      />
                     </motion.a>
                   );
                 })}
-               
-              </div>
+              </motion.div>
             </motion.div>
           </>
         )}

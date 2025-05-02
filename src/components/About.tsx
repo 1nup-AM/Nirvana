@@ -40,42 +40,61 @@ const About = () => {
   });
 
   return (
-    <section id="about" className="py-24 bg-true-black scroll-mt-20 mt-20">
-      <div className="container mx-auto px-4 max-w-5xl">
+    <section 
+      id="about" 
+      className="py-32 scroll-mt-20 relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, #0a0a0a 0%, #1a0000 50%, #0a0a0a 100%)'
+      }}
+    >
+      {/* Decorative elements */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-ogilvy-red rounded-full mix-blend-screen filter blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-ogilvy-red rounded-full mix-blend-screen filter blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left Column - Studio Philosophy */}
           <motion.div
             ref={ref}
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
           >
-            <h2 className="text-5xl font-playfair mb-8">Our Approach</h2>
-            <div className="prose prose-invert">
-              <p className="text-lg text-slate-gray leading-relaxed mb-6">
-                At Nirvana X, we believe in the transformative power of visual storytelling. Our approach combines technical excellence with artistic innovation, creating imagery that resonates and inspires.
-              </p>
-              <p className="text-lg text-slate-gray leading-relaxed mb-6">
-                Every project is an opportunity to push boundaries and challenge conventional perspectives. We work closely with our clients to understand their vision and translate it into compelling visual narratives.
-              </p>
+            <div className="relative">
+              <h2 className="text-6xl font-playfair font-bold mb-6 text-white">
+                Crafting <span className="text-ogilvy-red">Visual</span> Excellence
+              </h2>
+              <div className="w-24 h-1 bg-ogilvy-red mb-8"></div>
+              <div className="space-y-6">
+                <p className="text-xl text-slate-300 leading-relaxed">
+                  At <span className="text-ogilvy-red font-medium">Nirvana X</span>, we believe in the transformative power of visual storytelling. Our approach combines technical mastery with artistic innovation to create imagery that captivates and inspires.
+                </p>
+                <p className="text-xl text-slate-300 leading-relaxed">
+                  We treat each project as a unique opportunity to push creative boundaries while maintaining the essence of your brand's identity.
+                </p>
+              </div>
             </div>
 
             {/* Achievements Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               {achievements.map((achievement, index) => {
                 const Icon = achievement.icon;
                 return (
                   <motion.div
                     key={achievement.title}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 40 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: index * 0.2 }}
-                    className="p-6 bg-slate-gray/10 rounded-lg"
+                    transition={{ duration: 0.6, delay: index * 0.15 }}
+                    className="p-6 bg-slate-900/50 backdrop-blur-sm rounded-xl border border-slate-800/50 hover:border-ogilvy-red/30 transition-all duration-500"
                   >
-                    <Icon className="text-ogilvy-red mb-4" size={24} />
-                    <h3 className="text-xl font-playfair mb-2">{achievement.title}</h3>
-                    <p className="text-slate-gray">{achievement.description}</p>
+                    <div className="p-3 bg-ogilvy-red/10 rounded-lg w-max mb-4">
+                      <Icon className="text-ogilvy-red" size={24} />
+                    </div>
+                    <h3 className="text-xl font-playfair font-bold mb-2 text-white">{achievement.title}</h3>
+                    <p className="text-slate-400">{achievement.description}</p>
                   </motion.div>
                 );
               })}
@@ -84,17 +103,13 @@ const About = () => {
 
           {/* Right Column - Testimonials */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="space-y-8"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-12"
           >
-            <div className="relative">
-              <div className="absolute top-0 left-0 w-16 h-16 -mt-4 -ml-4">
-                <div className="absolute transform rotate-45 w-full h-full border-l-2 border-t-2 border-ogilvy-red" />
-              </div>
-              
-              <div className="space-y-12 pl-8 pt-8">
+            <div className="relative p-8 bg-slate-900/50 backdrop-blur-sm rounded-xl border border-slate-800/50">
+              <div className="space-y-12">
                 {testimonials.map((testimonial, index) => (
                   <motion.div
                     key={index}
@@ -103,14 +118,15 @@ const About = () => {
                     transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
                     className="relative"
                   >
-                    <blockquote className="text-xl font-playfair italic mb-4 text-white">
-                      "{testimonial.quote}"
+                    <div className="text-3xl absolute -left-8 -top-4 text-ogilvy-red opacity-20 font-playfair">"</div>
+                    <blockquote className="text-xl font-playfair italic mb-6 text-white leading-relaxed">
+                      {testimonial.quote}
                     </blockquote>
                     <div className="flex items-center">
                       <div className="h-px w-12 bg-ogilvy-red mr-4" />
                       <div>
                         <p className="font-medium text-white">{testimonial.author}</p>
-                        <p className="text-slate-gray">{testimonial.position}</p>
+                        <p className="text-slate-400">{testimonial.position}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -119,33 +135,52 @@ const About = () => {
             </div>
 
             {/* Studio Stats */}
-            <div className="mt-16 p-8 bg-slate-gray/10 rounded-lg">
-              <h3 className="text-2xl font-playfair mb-6">Studio Recognition</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-slate-gray">Client Satisfaction</span>
-                  <span className="text-ogilvy-red font-medium">98%</span>
-                </div>
-                <div className="w-full h-1 bg-slate-gray/20">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={inView ? { width: '98%' } : {}}
-                    transition={{ duration: 1, delay: 0.6 }}
-                    className="h-full bg-ogilvy-red"
-                  />
+            <div className="p-8 bg-slate-900/50 backdrop-blur-sm rounded-xl border border-slate-800/50">
+              <h3 className="text-2xl font-playfair font-bold mb-8 text-white">Studio Excellence</h3>
+              <div className="space-y-8">
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-slate-300">Client Satisfaction</span>
+                    <span className="text-ogilvy-red font-bold">98%</span>
+                  </div>
+                  <div className="w-full h-2 bg-slate-800 rounded-full">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={inView ? { width: '98%' } : {}}
+                      transition={{ duration: 1, delay: 0.6 }}
+                      className="h-full bg-gradient-to-r from-ogilvy-red to-ogilvy-red/70 rounded-full"
+                    />
+                  </div>
                 </div>
                 
-                <div className="flex justify-between items-center mt-4">
-                  <span className="text-slate-gray">Project Completion Rate</span>
-                  <span className="text-ogilvy-red font-medium">100%</span>
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-slate-300">Project Completion</span>
+                    <span className="text-ogilvy-red font-bold">100%</span>
+                  </div>
+                  <div className="w-full h-2 bg-slate-800 rounded-full">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={inView ? { width: '100%' } : {}}
+                      transition={{ duration: 1, delay: 0.8 }}
+                      className="h-full bg-gradient-to-r from-ogilvy-red to-ogilvy-red/70 rounded-full"
+                    />
+                  </div>
                 </div>
-                <div className="w-full h-1 bg-slate-gray/20">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={inView ? { width: '100%' } : {}}
-                    transition={{ duration: 1, delay: 0.8 }}
-                    className="h-full bg-ogilvy-red"
-                  />
+
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-slate-300">Repeat Clients</span>
+                    <span className="text-ogilvy-red font-bold">85%</span>
+                  </div>
+                  <div className="w-full h-2 bg-slate-800 rounded-full">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={inView ? { width: '85%' } : {}}
+                      transition={{ duration: 1, delay: 1.0 }}
+                      className="h-full bg-gradient-to-r from-ogilvy-red to-ogilvy-red/70 rounded-full"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

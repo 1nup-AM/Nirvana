@@ -1,228 +1,174 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import Masonry from 'react-masonry-css';
-import { useState } from 'react';
-// import { Rotate3D } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
-const portfolioItems = [
+export const allPortfolioItems = [
   {
     id: 1,
-    category: 'Fashion',
-    image: '/Fashion/Z50_8718-3.jpg',
-    title: 'Premium Luxury',
+    category: 'Product',
+    image: 'Brand/1.webp',
+    title: 'Premium Audio',
+    gridArea: '1 / 1 / 3 / 3'
   },
   {
     id: 2,
     category: 'Fashion',
-    image: '/Fashion/Z50_9537-2.jpg',
-    title: 'Premium Luxury',
+    image: 'Fashion/1.webp',
+    title: 'Timeless Elegance',
+    gridArea: '1 / 3 / 2 / 4'
   },
   {
     id: 3,
-    category: 'Fashion',
-    image: '/Fashion/Z50_9467-2.jpg',
-    title: 'Premium Luxury',
+    category: 'Product',
+    image: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80',
+    title: 'Urban Sport',
+    gridArea: '2 / 3 / 3 / 4'
   },
-  // {
-  //   id: 4,
-  //   category: 'Fashion',
-  //   image: 'public/Fashion/DSC_9551.MOV',
-  //   title: 'Premium Luxury',
-  // },
-
+  {
+    id: 4,
+    category: 'Editorial',
+    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
+    title: 'Minimal Workspace',
+    gridArea: '3 / 1 / 4 / 2'
+  },
   {
     id: 5,
     category: 'Fashion',
-    image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800&q=80',
-    title: 'Summer Collection',
+    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80',
+    title: 'Contemporary Style',
+    gridArea: '3 / 2 / 5 / 4'
   },
-
-  ////////////////////////////////////////////////
   {
     id: 6,
     category: 'Product',
-    image: '/Product/shot4.png',
-    title: 'Timeless Elegance',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',
+    title: 'Modern Essentials',
+    gridArea: '4 / 1 / 5 / 2'
   },
-  // {
-  //   id: 7,
-  //   category: 'Product',
-  //   image: '/Product/almond.mp4',
-  //   title: 'Necromantic',
-  // },
-  // {
-  //   id: 8,
-  //   category: 'Product',
-  //   image: 'public/Product/almond.mp4',
-  //   title: 'Necromantic',
-  // },
-  // {
-  //   id: 9,
-  //   category: 'Product',
-  //   image: 'public/Product/almond.mp4',
-  //   title: 'Necromantic',
-  // },
-  // {
-  //   id: 10,
-  //   category: 'Product',
-  //   image: 'public/Product/almond.mp4',
-  //   title: 'Necromantic',
-  // },
+  {
+    id: 7,
+    category: 'Product',
+    image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80',
+    title: 'Sunglasses Collection',
+    gridArea: '5 / 1 / 6 / 3'
+  },
+  {
+    id: 8,
+    category: 'Fashion',
+    image: 'https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=800&q=80',
+    title: 'Urban Minimalism',
+    gridArea: '5 / 3 / 7 / 4'
+  },
+  {
+    id: 9,
+    category: 'Editorial',
+    image: 'https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?w=800&q=80',
+    title: 'Studio Lighting',
+    gridArea: '6 / 1 / 7 / 2'
+  },
+  {
+    id: 10,
+    category: 'Product',
+    image: 'https://images.unsplash.com/photo-1503602642458-232111445657?w=800&q=80',
+    title: 'Minimal Product',
+    gridArea: '6 / 2 / 7 / 3'
+  },
   {
     id: 11,
-    category: 'Brand',
-    image: '/Brand/1709313030770.jpg',
-    title: 'Minimal Workspace',
+    category: 'Fashion',
+    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80',
+    title: 'Fashion Editorial',
+    gridArea: '7 / 1 / 8 / 2'
   },
-  ////////////////////////////////////////////////////////
   {
     id: 12,
-    category: 'Brand',
-    image: '/Brand/1711028885117.jpg',
-    title: 'Minimal Workspace',
-  },{
+    category: 'Editorial',
+    image: 'https://images.unsplash.com/photo-1554941829-202a0b2403b8?w=800&q=80',
+    title: 'Creative Space',
+    gridArea: '7 / 2 / 9 / 4'
+  },
+  {
     id: 13,
-    category: 'Brand',
-    image: '/Brand/1710875419228.jpg',
-    title: 'Minimal Workspace',
-  },{
+    category: 'Product',
+    image: 'https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=800&q=80',
+    title: 'Watch Collection',
+    gridArea: '8 / 1 / 9 / 2'
+  },
+  {
     id: 14,
-    category: 'Brand',
-    image: '/Brand/1710534508842.jpg',
-    title: 'Minimal Workspace',
-  },{
+    category: 'Fashion',
+    image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800&q=80',
+    title: 'Summer Collection',
+    gridArea: '9 / 2 / 10 / 4'
+  },
+  {
     id: 15,
-    category: 'Brand',
-    image: '/Brand/1705566827784.jpg',
-    title: 'Minimal Workspace',
-  },{
+    category: 'Editorial',
+    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&q=80',
+    title: 'Office Life',
+    gridArea: '9 / 1 / 10 / 2'
+  },
+  {
     id: 16,
-    category: 'Brand',
-    image: '/Brand/shot3.png',
-    title: 'Minimal Workspace',
+    category: 'Product',
+    image: 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800&q=80',
+    title: 'Tech Accessories',
+    gridArea: '10 / 1 / 11 / 3'
   },
   {
     id: 17,
-    category: 'Brand',
-    image: '/Brand/shot2.png',
-    title: 'Minimal Workspace',
+    category: 'Fashion',
+    image: 'https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=800&q=80',
+    title: 'Autumn Style',
+    gridArea: '10 / 3 / 11 / 4'
   },
   {
     id: 18,
-    category: 'Brand',
-    image: '/Brand/shot1.png',
-    title: 'Minimal Workspace',
+    category: 'Editorial',
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80',
+    title: 'Digital Workspace',
+    gridArea: '11 / 1 / 12 / 2'
   },
-  
-  ////////////////////////////////////////////////
- 
-
   {
     id: 19,
-    category: 'Gallery',
-    image: '/Gallery/1707659296759.jpg',
-    title: 'Minimal Workspace',
+    category: 'Product',
+    image: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800&q=80',
+    title: 'Camera Equipment',
+    gridArea: '11 / 2 / 12 / 3'
   },
   {
     id: 20,
-    category: 'Gallery',
-    image: 'https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?w=800&q=80',
-    title: 'Studio Lighting',
-  },
-  
-  
-  // {
-  //   id: 21,
-  //   category: 'Gallery',
-  //   image: '/Gallery/VN20240307_214525.mp4',
-  //   title: 'Creative Space',
-  // },
-  
-  
-  {
-    id: 22,
-    category: 'Gallery',
-    image: '/Gallery/1698652147277.jpg',
-    title: 'Office Life',
-  },
-  {
-    id: 23,
-    category: 'Gallery',
-    image: '/Gallery/1711730853565.jpg',
-    title: 'Office Life',
-  },
-  {
-    id: 24,
-    category: 'Gallery',
-    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&q=80',
-    title: 'Office Life',
-  },
-  {
-    id: 25,
-    category: 'Gallery',
-    image: '/Gallery/IMG_20240107_030613.jpg',
-    title: 'Office Life',
-  },
-  {
-    id: 26,
-    category: 'Gallery',
-    image: '/Gallery/1705938528551 (1).jpg',
-    title: 'Office Life',
-  },
-  {
-    id: 27,
-    category: 'Gallery',
-    image: '/Gallery/_UR03329.JPG',
-    title: 'Office Life',
-  },
-  {
-    id: 28,
-    category: 'Gallery',
-    image: '/Gallery/_UR03300.JPG',
-    title: 'Office Life',
-  },
-  {
-    id: 29,
-    category: 'Gallery',
-    image: '/Gallery/_UR03306.JPG',
-    title: 'Office Life',
-  },
-  {
-    id: 30,
-    category: 'Gallery',
-    image: '/Gallery/_UR03217.JPG',
-    title: 'Office Life',
-  },
-  {
-    id: 32,
-    category: 'Gallery',
-    image: '/Gallery/_UR03207.JPG',
-    title: 'Office Life',
-  },
+    category: 'Fashion',
+    image: 'https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?w=800&q=80',
+    title: 'Winter Collection',
+    gridArea: '11 / 3 / 12 / 4'
+  }
 ];
 
-const categories = ['All', ...new Set(portfolioItems.map(item => item.category))];
-
 const Portfolio = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  const filteredItems = selectedCategory === 'All' 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === selectedCategory);
-
-  const breakpointColumns = {
-    default: 4,
-    1100: 3,
-    700: 2,
-    500:1,
-  };
+  const slides = allPortfolioItems.map(item => ({
+    src: item.image,
+    alt: item.title,
+  }));
 
   return (
-    <section id="portfolio" className="py-24 px-4 bg-true-black scroll-mt-20">
+    <section 
+      id="portfolio" 
+      className="py-24 px-4 scroll-mt-10"
+      style={{
+        background: 'linear-gradient(135deg, #000000 0%, #1a0000 50%, #330000 100%)'
+      }}
+    >
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 20 }}
@@ -230,60 +176,71 @@ const Portfolio = () => {
         transition={{ duration: 0.6 }}
         className="container mx-auto"
       >
-        <h2 className="text-5xl font-playfair mb-12 text-center">Portfolio</h2>
-        
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-ogilvy-red text-white'
-                  : 'bg-slate-gray/20 text-slate-gray hover:bg-slate-gray/30'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+        <div className="text-center mb-16">
+          <h2 className="text-6xl font-playfair font-bold mb-4 text-white">
+            Our <span className="text-ogilvy-red">Portfolio</span>
+          </h2>
+          <div className="w-24 h-1 bg-ogilvy-red mx-auto mb-6"></div>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Explore our curated collection of creative works
+          </p>
         </div>
 
-        {/* Masonry Grid */}
-        <Masonry
-          breakpointCols={breakpointColumns}
-          className="flex -ml-4 w-auto"
-          columnClassName="pl-4 bg-clip-padding"
-        >
-          {filteredItems.map((item) => (
-            <motion.div
-              key={item.id}
-              layout
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-4"
-            >
-              <div className="relative group overflow-hidden rounded">
+        <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 auto-rows-[250px] mb-16">
+            {allPortfolioItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                layout
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                style={{ gridArea: item.gridArea }}
+                className="relative group cursor-pointer overflow-hidden rounded-xl shadow-2xl"
+                onClick={() => {
+                  setLightboxIndex(index);
+                  setLightboxOpen(true);
+                }}
+              >
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full transition-transform duration-500 group-hover:scale-105 hover:grayscale-0"
+                  loading='lazy'
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-true-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                   <div>
-                    <h3 className="text-xl font-playfair text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-400">{item.category}</p>
+                    <h3 className="text-2xl font-bold font-playfair text-white mb-2">{item.title}</h3>
+                    <span className="inline-block px-3 py-1 bg-ogilvy-red text-white text-sm rounded-full">
+                      {item.category}
+                    </span>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </Masonry>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center">
+          <Link
+            to="/portfolio"
+            className="inline-block px-10 py-4 bg-transparent border-2 border-ogilvy-red text-ogilvy-red text-lg font-semibold rounded-full hover:bg-ogilvy-red hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-red-900/30"
+          >
+            View All Works →
+          </Link>
+        </div>
+
+        <Lightbox
+          open={lightboxOpen}
+          close={() => setLightboxOpen(false)}
+          index={lightboxIndex}
+          slides={slides}
+        />
       </motion.div>
     </section>
   );
 };
 
 export default Portfolio;
+

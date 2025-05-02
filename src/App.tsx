@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import HomePage from './pages/HomePage';
 import JournalPage from './pages/JournalPage';
 import JournalPost from './pages/JournalPost';
+import PortfolioPage from './pages/PortfolioPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/journal" element={<JournalPage />} />
         <Route path="/journal/:id" element={<JournalPost />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
       </Routes>
     </div>
   );
