@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Calendar, Tag, ArrowRight } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { posts } from '../data/posts';
 
