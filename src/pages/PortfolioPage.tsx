@@ -8,7 +8,7 @@ const portfolioItems = [
   {
     id: 1,
     category: 'Product',
-    image: 'public/Product/1.webp',
+    image: 'Product/1.webp',
     title: 'Premium Audio',
   },
   {
