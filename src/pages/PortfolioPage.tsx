@@ -47,12 +47,12 @@ const portfolioItems = [
     image: 'Fashion/3.webp',
     title: 'Sunglasses Collection',
   },
-  {
-    id: 8,
-    category: 'Gallery',
-    image: 'Gallery/1.webp',
-    title: 'Urban Minimalism',
-  },
+  // {
+  //   id: 8,
+  //   category: 'Gallery',
+  //   image: 'Gallery/1.webp',
+  //   title: 'Urban Minimalism',
+  // },
   {
     id: 9,
     category: 'Brand',
@@ -65,24 +65,24 @@ const portfolioItems = [
     image: 'Gallery/2.webp',
     title: 'Minimal Product',
   },
-  {
-    id: 11,
-    category: 'Gallery',
-    image: 'Gallery/3.webp',
-    title: 'Fashion Editorial',
-  },
+  // {
+  //   id: 11,
+  //   category: 'Gallery',
+  //   image: 'Gallery/3.webp',
+  //   title: 'Fashion Editorial',
+  // },
   {
     id: 12,
     category: 'Brand',
     image: 'Brand/4.webp',
     title: 'Creative Space',
   },
-  {
-    id: 13,
-    category: 'Gallery',
-    image: 'Gallery/4.webp',
-    title: 'Watch Collection',
-  },
+  // {
+  //   id: 13,
+  //   category: 'Gallery',
+  //   image: 'Gallery/4.webp',
+  //   title: 'Watch Collection',
+  // },
   {
     id: 14,
     category: 'Gallery',
@@ -95,12 +95,12 @@ const portfolioItems = [
     image: 'Brand/5.webp',
     title: 'Office Life',
   },
-  {
-    id: 16,
-    category: 'Gallery',
-    image: 'Gallery/6.webp',
-    title: 'Tech Accessories',
-  },
+  // {
+  //   id: 16,
+  //   category: 'Gallery',
+  //   image: 'Gallery/6.webp',
+  //   title: 'Tech Accessories',
+  // },
   {
     id: 17,
     category: 'Brand',
@@ -122,7 +122,7 @@ const portfolioItems = [
   {
     id: 20,
     category: 'Gallery',
-    image: 'Gallery/8.webp',
+    image: 'Gallery/10.webp',
     title: 'Winter Collection',
   },
   {
