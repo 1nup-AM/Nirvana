@@ -82,12 +82,12 @@ const Team = () => {
                       className="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                      <div>
+{/*                       <div>
                         <p className="text-slate-300 mb-4">{member.bio}</p>
                         <div className="border-t border-ogilvy-red/30 pt-4">
                           <p className="text-sm text-slate-400">Notable Projects</p>
                           <p className="text-white font-medium">{member.notable}</p>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
