@@ -5,43 +5,23 @@ import { Camera, Aperture, Film, Lightbulb } from 'lucide-react';
 const teamMembers = [
   {
     id: 1,
-    name: 'Alexandra Chen',
-    role: 'Creative Director',
+    name: 'Aditya Vikram Singh',
+    role: 'Founder',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80',
-    specialty: 'Editorial & Fashion',
-    bio: 'With over a decade of experience in fashion photography, Alexandra brings her unique vision to every project.',
-    icon: Camera,
-    notable: 'Vogue, Elle, Harper Bazaar'
+    specialty: 'Marketing & Fashion',
+    bio: 'Aditya is a visionary leader with a passion for blending fashion and marketing, creating compelling visual narratives.',
+    icon: Aperture,
+    // notable: 'Vogue, Elle, Harper Bazaar'
   },
   {
     id: 2,
-    name: 'Marcus Rivera',
-    role: 'Technical Director',
+    name: 'Utkarsh Raghuvanshi',
+    role: 'Co-Founder',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
-    specialty: 'Product & Lighting',
-    bio: 'Marcus specializes in creating stunning product imagery through innovative lighting techniques.',
-    icon: Aperture,
-    notable: 'Apple, Nike, Samsung'
-  },
-  {
-    id: 3,
-    name: 'Sarah Williams',
-    role: 'Art Director',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80',
-    specialty: 'Conceptual & Fine Art',
-    bio: 'Sarahs work bridges the gap between commercial photography and fine art.',
-    icon: Lightbulb,
-    notable: 'Museum of Modern Art, Venice Biennale'
-  },
-  {
-    id: 4,
-    name: 'David Kim',
-    role: 'Cinematographer',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80',
-    specialty: 'Motion & Narrative',
-    bio: 'David brings stories to life through his cinematic approach to commercial photography.',
-    icon: Film,
-    notable: 'BMW, Mercedes-Benz, Audi'
+    specialty: 'Photography & Lighting',
+    bio: 'Utkarsh is a master of light, capturing the essence of his subjects with precision and artistry.',
+    icon:  Camera,
+    // notable: 'Apple, Nike, Samsung'
   }
 ];
 
