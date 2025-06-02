@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Camera, Aperture, Film, Lightbulb } from 'lucide-react';
+import { Camera, Aperture, } from 'lucide-react';
 
 const teamMembers = [
   {
@@ -8,7 +8,7 @@ const teamMembers = [
     name: 'Aditya Vikram Singh',
     role: 'Founder',
     image: 'aadi.webp',
-    specialty: 'Marketing & Fashion',
+    // specialty: 'Marketing & Fashion',
     bio: 'Aditya is a visionary leader with a passion for blending fashion and marketing, creating compelling visual narratives.',
     icon: Aperture,
     // notable: 'Vogue, Elle, Harper Bazaar'
@@ -18,7 +18,7 @@ const teamMembers = [
     name: 'Utkarsh Raghuvanshi',
     role: 'Co-Founder',
     image: 'utkarsh.webp',
-    specialty: 'Photography & Lighting',
+    // specialty: 'Photography & Lighting',
     bio: 'Utkarsh is a master of light, capturing the essence of his subjects with precision and artistry.',
     icon:  Camera,
     // notable: 'Apple, Nike, Samsung'
@@ -101,9 +101,9 @@ const Team = () => {
                         <p className="text-slate-400">{member.role}</p>
                       </div>
                     </div>
-                    <span className="inline-block px-4 py-1.5 bg-ogilvy-red/10 text-ogilvy-red rounded-full text-sm font-medium border border-ogilvy-red/20">
+                    {/* <span className="inline-block px-4 py-1.5 bg-ogilvy-red/10 text-ogilvy-red rounded-full text-sm font-medium border border-ogilvy-red/20">
                       {member.specialty}
-                    </span>
+                    </span> */}
                   </div>
                 </div>
               </motion.div>
