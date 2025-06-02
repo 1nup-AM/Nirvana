@@ -136,6 +136,30 @@ const portfolioItems = [
     category: 'Brand',
     image: 'Brand/8.webp',
     title: 'Winter Collection',
+  },
+  {
+    id: 23,
+    category: 'E-Commerce',
+    image: 'E-commerce/1.webp',
+    title: 'Rings of Radiance',
+  },
+  {
+    id: 24,
+    category: 'E-Commerce',
+    image: 'E-commerce/2.webp',
+    title: 'Rings of Radiance',
+  },
+  {
+    id: 25,
+    category: 'E-Commerce',
+    image: 'E-commerce/3.webp',
+    title: 'Rings of Radiance',
+  },
+  {
+    id: 26,
+    category: 'E-Commerce',
+    image: 'E-commerce/4.webp',
+    title: 'Rings of Radiance',
   }
 ];
 
