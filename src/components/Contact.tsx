@@ -1,21 +1,21 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin as LinkedIn } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin as LinkedIn, Facebook } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'contact@NirvanaX.in',
-    link: 'mailto:contact@NirvanaX.in'
+    value: 'contact@nirvanax.in',
+    link: 'mailto:contact@nirvanax.in'
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+917571840108',
-    link: 'tel:+917571840108'
+    value: '+91-8382990469',
+    link: 'tel:+91-8382990469'
   },
   {
     icon: MapPin,
@@ -30,6 +30,11 @@ const socialLinks = [
     icon: Instagram,
     label: 'Instagram',
     link: 'https://www.instagram.com/nirvanaxofficial?igsh=MTV6eDBpZ3BsYjQyMQ=='
+  },
+  {
+    icon: Facebook,
+    label: 'Facebook',
+    link: 'https://twitter.com'
   },
   {
     icon: Twitter,
@@ -237,8 +242,8 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Social Links */}
               <div className="bg-slate-900/50 backdrop-blur-sm p-8 rounded-xl border border-slate-800/50">
-                <h3 className="text-2xl font-playfair font-bold mb-8 text-white">Follow Us</h3>
-                <div className="flex flex-wrap gap-4">
+                <h3 className="text-2xl text-center font-playfair font-bold mb-8 text-white">Follow Us</h3>
+                <div className="flex  flex-wrap justify-center  gap-6 py-2 ">
                   {socialLinks.map((social, index) => {
                     const Icon = social.icon;
                     return (

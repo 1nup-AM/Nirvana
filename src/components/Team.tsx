@@ -41,8 +41,8 @@ const Team = () => {
     >
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-ogilvy-red rounded-full mix-blend-screen filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-ogilvy-red rounded-full mix-blend-screen filter blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-45 h-45 bg-ogilvy-red rounded-full mix-blend-screen filter blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-45 h-45 bg-ogilvy-red rounded-full mix-blend-screen filter blur-3xl"></div>
       </div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
@@ -53,12 +53,15 @@ const Team = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-6xl font-playfair font-bold mb-6 text-white">
-            Meet <span className="text-ogilvy-red">The Team</span>
-          </h2>
+          <h2 className="text-5xl py-5 font-playfair font-bold mb-6">
+          <span className="text-white">
+            The Minds Behind Nirvana
+            <span className="text-red-600">X</span>
+          </span>
+        </h2>
           <div className="w-24 h-1 bg-ogilvy-red mx-auto mb-6"></div>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            A collective of visionary photographers and artists pushing the boundaries of visual storytelling.
+          <p className="text-xl text-red-400 max-w-3xl mx-auto">
+            A collective of visionaries blending marketing, design, and storytelling to transform real estate into experiences.
           </p>
         </motion.div>
 

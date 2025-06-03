@@ -9,7 +9,7 @@ export const allPortfolioItems = [
   {
     id: 1,
     category: "Brand",
-    image: "Brand/1.webp",
+    image: "Brand/8.webp",
     title: "Corporate Identity",
     gridArea: "1 / 1 / 3 / 3", // Large first item
   },
@@ -76,13 +76,13 @@ export const allPortfolioItems = [
     title: "Winter Collection",
     gridArea: "6 / 2 / 7 / 3",
   },
-  {
-    id: 11,
-    category: "Gallery",
-    image: "Gallery/3.webp",
-    title: "Creative Space",
-    gridArea: "7 / 1 / 8 / 3",
-  },
+  // {
+  //   id: 11,
+  //   category: "Gallery",
+  //   image: "Gallery/3.webp",
+  //   title: "Creative Space",
+  //   gridArea: "7 / 1 / 8 / 3",
+  // },
   {
     id: 12,
     category: "Brand",
@@ -90,13 +90,13 @@ export const allPortfolioItems = [
     title: "Minimal Brand",
     gridArea: "7 / 3 / 8 / 4", // Large bottom item
   },
-  {
-    id: 13,
-    category: "Gallery",
-    image: "Gallery/4.webp",
-    title: "Studio Lighting",
-    gridArea: "8 / 1 / 9 / 4",
-  },
+  // {
+  //   id: 13,
+  //   category: "Gallery",
+  //   image: "Gallery/4.webp",
+  //   title: "Studio Lighting",
+  //   gridArea: "8 / 1 / 9 / 4",
+  // },
 ];
 
 const Portfolio = () => {

@@ -23,13 +23,13 @@ const achievements = [
 const testimonials = [
   {
     quote: "Nirvana X transformed our brand identity through their exceptional visual storytelling. Their attention to detail and creative vision exceeded our expectations.",
-    author: "Emily Chen",
-    position: "Creative Director, Luxe Fashion"
+    author: "Aman Singh",
+    position: "Developer, Tech Innovations"
   },
   {
     quote: "Working with Nirvana X was a game-changer for our product launches. Their ability to capture the essence of our brand is unmatched.",
-    author: "Michael Stewart",
-    position: "Marketing Head, Tech Innovations"
+    author: "Anupam Mishra",
+    position: "Developer, Tech Innovations"
   }
 ];
 

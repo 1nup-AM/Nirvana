@@ -64,10 +64,12 @@ const Navigation = () => {
   };
 
   const socialLinks: SocialLink[] = [
+    { icon: Mail, href: "mailto:contact@nirvanax.com", label: "Email" },
     { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
     { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:contact@nirvanax.com", label: "Email" },
+    
   ];
 
   const navLinks: NavLink[] = [
