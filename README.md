@@ -15,8 +15,8 @@ Optimized for fast loading and SEO
 🚀 Technologies Used
 
 HTML5
-CSS3
-JavaScript 
+Tailwind
+TypeScript 
 React
 
 🙌 Contributing
