@@ -34,12 +34,12 @@ const socialLinks = [
   {
     icon: Facebook,
     label: 'Facebook',
-    link: 'https://twitter.com'
+    link: 'https://www.facebook.com/profile.php?id=61576143164463'
   },
   {
     icon: Twitter,
     label: 'Twitter',
-    link: 'https://twitter.com'
+    link: 'https://x.com/NirvanaX_agency'
   },
   {
     icon: LinkedIn,

@@ -64,11 +64,11 @@ const Navigation = () => {
   };
 
   const socialLinks: SocialLink[] = [
-    { icon: Mail, href: "mailto:contact@nirvanax.com", label: "Email" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:admin@nirvanax.in", label: "Email" },
+    { icon: Instagram, href: "https://www.instagram.com/nirvanaxofficial?igsh=MTV6eDBpZ3BsYjQyMQ==", label: "Instagram" },
+    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61576143164463", label: "Facebook" },
+    { icon: Twitter, href: "https://x.com/NirvanaX_agency", label: "Twitter" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/nirvana-x/", label: "LinkedIn" },
     
   ];
 
