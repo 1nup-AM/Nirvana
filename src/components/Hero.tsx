@@ -2,14 +2,15 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const gridImages = [
-  "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80",
-  "https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&q=80",
-  "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&q=80",
-  "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80",
-  "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80",
+
+  "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80", //Headphone
+  "https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&q=80", //Clothes
+  "Fashion/keerti1.webp", //KEERTI
+  "E-commerce/3.webp", //Ring of Radiance
+  "Brand/1.webp", //Urban Landscape
   "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80",
-  "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&q=80",
-  "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=400&q=80",
+  "Fashion/Vidhi3.webp", //Summer Collection
+  "E-commerce/3.webp",
 ];
 
 const Hero = () => {

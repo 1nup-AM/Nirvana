@@ -45,14 +45,14 @@ const portfolioItems = [
     id: 7,
     category: 'Fashion',
     image: 'Fashion/3.webp',
-    title: 'Sunglasses Collection',
+    title: 'Esthaetic shoot',
   },
-  // {
-  //   id: 8,
-  //   category: 'Gallery',
-  //   image: 'Gallery/1.webp',
-  //   title: 'Urban Minimalism',
-  // },
+  {
+    id: 8,
+    category: 'Fashion',
+    image: 'Fashion/Vidhi2.webp',
+    title: 'Fashion Shoot',
+  },
   {
     id: 9,
     category: 'Brand',
@@ -65,24 +65,24 @@ const portfolioItems = [
     image: 'Gallery/2.webp',
     title: 'Minimal Product',
   },
-  // {
-  //   id: 11,
-  //   category: 'Gallery',
-  //   image: 'Gallery/3.webp',
-  //   title: 'Fashion Editorial',
-  // },
+{
+    id: 11,
+    category: 'Fashion',
+    image: 'Fashion/VIdhi.webp',
+    title: 'Fashion Shoot',
+  },
   {
     id: 12,
     category: 'Brand',
     image: 'Brand/4.webp',
     title: 'Creative Space',
   },
-  // {
-  //   id: 13,
-  //   category: 'Gallery',
-  //   image: 'Gallery/4.webp',
-  //   title: 'Watch Collection',
-  // },
+  {
+    id: 13,
+    category: 'Fashion',
+    image: 'Fashion/Vidhi3.webp',
+    title: 'Fashion Shoot',
+  },
   {
     id: 14,
     category: 'Gallery',
@@ -95,12 +95,12 @@ const portfolioItems = [
     image: 'Brand/5.webp',
     title: 'Office Life',
   },
-  // {
-  //   id: 16,
-  //   category: 'Gallery',
-  //   image: 'Gallery/6.webp',
-  //   title: 'Tech Accessories',
-  // },
+{
+    id: 16,
+    category: 'Fashion',
+    image: 'Fashion/keerti1.webp',
+    title: 'Fashion Shoot',
+  },
   {
     id: 17,
     category: 'Brand',
@@ -160,7 +160,19 @@ const portfolioItems = [
     category: 'E-Commerce',
     image: 'E-commerce/4.webp',
     title: 'Rings of Radiance',
-  }
+  },
+  // {
+  //   id: 27,
+  //   category: 'Fashion',
+  //   image: 'Fashion/keerti1.webp',
+  //   title: 'Fashion Shoot',
+  // },
+  // {
+  //   id: 28,
+  //   category: 'Fashion',
+  //   image: 'Fashion/VIdhi.webp',
+  //   title: 'Fashion Shoot',
+  // },
 ];
 
 const categories = ['All', ...new Set(portfolioItems.map(item => item.category))];

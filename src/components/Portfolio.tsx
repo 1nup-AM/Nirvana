@@ -8,9 +8,9 @@ import "yet-another-react-lightbox/styles.css";
 export const allPortfolioItems = [
   {
     id: 1,
-    category: "Brand",
-    image: "Brand/8.webp",
-    title: "Corporate Identity",
+    category: "E-Commerce",
+    image: "E-commerce/3.webp",
+    title: "Ring of Radiance",
     gridArea: "1 / 1 / 3 / 3", // Large first item
   },
   {
@@ -22,8 +22,8 @@ export const allPortfolioItems = [
   },
   {
     id: 3,
-    category: "Gallery",
-    image: "Gallery/1.webp",
+    category: "Brand",
+    image: "Brand/6.webp",
     title: "Urban Landscape",
     gridArea: "2 / 3 / 3 / 4",
   },
@@ -57,32 +57,33 @@ export const allPortfolioItems = [
   },
   {
     id: 8,
-    category: "Gallery",
-    image: "Gallery/2.webp",
+    category: "Fashion",
+    image: "Fashion/VIdhi.webp",
     title: "Abstract Moments",
     gridArea: "5 / 3 / 7 / 4", // Vertical double
   },
+  
   {
     id: 9,
-    category: "Brand",
-    image: "Brand/3.webp",
+    category: "Fashion",
+    image: "Fashion/keerti1.webp",
     title: "Lifestyle Brand",
     gridArea: "6 / 1 / 7 / 2",
   },
   {
     id: 10,
     category: "Fashion",
-    image: "Fashion/3.webp",
+    image: "Fashion/Vidhi2.webp",
     title: "Winter Collection",
     gridArea: "6 / 2 / 7 / 3",
   },
-  // {
-  //   id: 11,
-  //   category: "Gallery",
-  //   image: "Gallery/3.webp",
-  //   title: "Creative Space",
-  //   gridArea: "7 / 1 / 8 / 3",
-  // },
+  {
+    id: 11,
+    category: "Fashion",
+    image: "Fashion/Keerti2.webp",
+    title: "Creative Space",
+    gridArea: "7 / 1 / 8 / 3",
+  },
   {
     id: 12,
     category: "Brand",
