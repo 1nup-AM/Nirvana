@@ -130,10 +130,10 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
       >
         <h1 className="text-7xl md:text-8xl font-playfair mb-6">
-          <span>NIRVANA <span className="text-ogilvy-red">X</span></span>
+          <span>NIRVANA<span className="text-ogilvy-red">X</span></span>
         </h1>
         <p className="text-xl italic opacity-85 tracking-widest md:text-2xl font-inter max-w-2xl mx-auto px-4">
-          A visual storytelling studio
+          Vision to Visuals
         </p>
       </motion.div>
 
