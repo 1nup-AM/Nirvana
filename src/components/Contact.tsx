@@ -14,8 +14,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+91-8382990469',
-    link: 'tel:+91-8382990469'
+    value: '+91-9266910469',
+    link: 'tel:+91-9266910469'
   },
   {
     icon: MapPin,

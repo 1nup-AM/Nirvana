@@ -63,7 +63,7 @@ const portfolioItems = [
     id: 10,
     category: 'Gallery',
     image: 'Gallery/2.webp',
-    title: 'Minimal Product',
+    title: 'Urban Vibes',
   },
 {
     id: 11,
@@ -129,13 +129,13 @@ const portfolioItems = [
     id: 21,
     category: 'Gallery',
     image: 'Gallery/9.webp',
-    title: 'Winter Collection',
+    title: 'Hansraj Raghuwanshi',
   },
   {
     id: 22,
     category: 'Brand',
     image: 'Brand/8.webp',
-    title: 'Winter Collection',
+    title: 'Brand Identity',
   },
   {
     id: 23,
@@ -161,18 +161,48 @@ const portfolioItems = [
     image: 'E-commerce/4.webp',
     title: 'Rings of Radiance',
   },
-  // {
-  //   id: 27,
-  //   category: 'Fashion',
-  //   image: 'Fashion/keerti1.webp',
-  //   title: 'Fashion Shoot',
-  // },
-  // {
-  //   id: 28,
-  //   category: 'Fashion',
-  //   image: 'Fashion/VIdhi.webp',
-  //   title: 'Fashion Shoot',
-  // },
+  {
+    id: 27,
+    category: 'Gallery',
+    image: 'Gallery/1.webp',
+    title: 'Fashion Shoot',
+  },
+  {
+    id: 28,
+    category: 'Gallery',
+    image: 'Gallery/3.webp',
+    title: 'Fashion Shoot',
+  },
+  {
+    id: 29,
+    category: 'Gallery',
+    image: 'Gallery/4.webp',
+    title: 'Hansraj Raghuwanshi',
+  },
+  {
+    id: 30,
+    category: 'Gallery',
+    image: 'Gallery/6.webp',
+    title: 'Baby Photoshoot',
+  },
+  {
+    id: 31,
+    category: 'Gallery',
+    image: 'Gallery/8.webp',
+    title: 'Colourful Workspace',
+  },
+  {
+    id: 32,
+    category: 'Product',
+    image: 'Brand/4.webp',
+    title: 'Colourful Workspace',
+  },
+  {
+    id: 33,
+    category: 'Product',
+    image: 'Brand/7.webp',
+    title: 'Colourful Workspace',
+  },
 ];
 
 const categories = ['All', ...new Set(portfolioItems.map(item => item.category))];

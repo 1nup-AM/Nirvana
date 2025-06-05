@@ -29,9 +29,9 @@ export const allPortfolioItems = [
   },
   {
     id: 4,
-    category: "Product",
-    image: "Product/1.webp",
-    title: "Luxury Packaging",
+    category: "Gallery",
+    image: "Gallery/4.webp",
+    title: "Hansraj Raghuwanshi",
     gridArea: "3 / 1 / 4 / 2",
   },
   {
@@ -52,14 +52,14 @@ export const allPortfolioItems = [
     id: 7,
     category: "Product",
     image: "Product/2.webp",
-    title: "Eco-Friendly Design",
+    title: "Elegant Design",
     gridArea: "5 / 1 / 6 / 3", // Horizontal double
   },
   {
     id: 8,
     category: "Fashion",
     image: "Fashion/VIdhi.webp",
-    title: "Abstract Moments",
+    title: "Fashion Forward",
     gridArea: "5 / 3 / 7 / 4", // Vertical double
   },
   
@@ -72,9 +72,9 @@ export const allPortfolioItems = [
   },
   {
     id: 10,
-    category: "Fashion",
-    image: "Fashion/Vidhi2.webp",
-    title: "Winter Collection",
+    category: "Gallery",
+    image: "Gallery/1.webp",
+    title: "Urban Vibes",
     gridArea: "6 / 2 / 7 / 3",
   },
   {
@@ -86,9 +86,9 @@ export const allPortfolioItems = [
   },
   {
     id: 12,
-    category: "Brand",
-    image: "Brand/4.webp",
-    title: "Minimal Brand",
+    category: "Gallery",
+    image: "Gallery/10.webp",
+    title: "Hansraj Raghuwanshi",
     gridArea: "7 / 3 / 8 / 4", // Large bottom item
   },
   // {
