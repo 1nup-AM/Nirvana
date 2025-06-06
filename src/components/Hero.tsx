@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
+import { motion,useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useRef } from "react";
 
 const gridImages = [
 
@@ -14,10 +15,25 @@ const gridImages = [
 ];
 
 const Hero = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"], // when top of hero hits top of viewport to when bottom hits top
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.6]); // slight zoom out
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]); // fade out
+
+
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div ref={ref} className="relative h-screen flex items-center justify-center overflow-hidden">
       {/*Scrolling Background Grid */}
       <div className="absolute inset-0 bg-true-black/90" />
+
+      <motion.div
+        style={{ scale, opacity }}
+        className="absolute inset-0 flex items-center justify-center text-6xl font-bold"
+      >
 
       <div className="absolute inset-0 grid grid-cols-2 lg:grid-cols-4 gap-4 overflow-hidden">
         <motion.div
@@ -129,12 +145,14 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-7xl md:text-8xl font-playfair mb-6">
+        {/* <h1 className="text-7xl md:text-8xl font-playfair mb-6">
           <span>NIRVANA<span className="text-ogilvy-red">X</span></span>
-        </h1>
-        <p className="text-xl italic opacity-85 tracking-widest md:text-2xl font-inter max-w-2xl mx-auto px-4">
+        </h1> */}
+        <img src="aaab.png" alt="Logo" className="h-36 w-auto" />
+   
+        {/* <p className="text-xl  italic opacity-85 tracking-widest md:text-2xl  max-w-2xl mx-auto px-4">
           Vision to Visuals
-        </p>
+        </p> */}
       </motion.div>
 
       {/* Scroll Indicator */}
@@ -150,6 +168,7 @@ const Hero = () => {
         >
           <ChevronDown size={32} className="text-ogilvy-red" />
         </motion.div>
+      </motion.div>
       </motion.div>
     </div>
   );

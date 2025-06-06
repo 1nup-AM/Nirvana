@@ -85,18 +85,28 @@ const Navigation = () => {
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-true-black/90 backdrop-blur-md py-2 shadow-lg"
+            ? "py-2"
             : "py-4"
         }`}
       >
         <div className="container mx-auto px-3 flex justify-between items-center max-w-7xl">
-          <Link
+          {/* <Link
             to="/"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="text-3xl font-playfair font-bold text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2"
           >
             NIRVANA<span className="text-ogilvy-red">X</span>
-          </Link>
+          </Link> */}
+
+          <Link
+    to="/"
+    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    className="text-3xl font-playfair font-bold text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2"
+  >
+    <img src="aaab.png" alt="Logo" className="h-12 w-auto" />
+   
+  </Link>
+
 
           <button
             className="text-white z-50 p-2 rounded-full hover:bg-slate-800/50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-ogilvy-red/50"

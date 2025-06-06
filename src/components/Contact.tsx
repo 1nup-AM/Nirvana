@@ -70,10 +70,10 @@ const Contact = () => {
 
     try {
       await emailjs.sendForm(
-        'service_khn80b9',
-        'template_s9z8muo',
+        'service_iqvuiqr',
+        'template_q05l2l8',
         form,
-        '8GsJpln8NSybxSk2A'
+        'sOHL1Otn07bNENfiv'
       );
 
       setFormStatus({
