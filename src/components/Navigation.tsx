@@ -85,8 +85,8 @@ const Navigation = () => {
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           isScrolled
-            ? "py-2"
-            : "py-4"
+            ? "py-2 "
+            : "py-4 hidden"
         }`}
       >
         <div className="container mx-auto px-3 flex justify-between items-center max-w-7xl">

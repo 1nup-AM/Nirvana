@@ -43,8 +43,8 @@ export const allPortfolioItems = [
   },
   {
     id: 6,
-    category: "Brand",
-    image: "Brand/2.webp",
+    category: "Gallery",
+    image: "Gallery/3.webp",
     title: "Tech Branding",
     gridArea: "4 / 1 / 5 / 2",
   },

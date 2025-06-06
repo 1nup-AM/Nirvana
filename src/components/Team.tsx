@@ -60,7 +60,7 @@ const Team = () => {
           </span>
         </h2>
           <div className="w-24 h-1 bg-ogilvy-red mx-auto mb-6"></div>
-          <p className="text-xl text-red-400 max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             A collective of visionaries blending marketing, design, and storytelling to transform real estate into experiences.
           </p>
         </motion.div>

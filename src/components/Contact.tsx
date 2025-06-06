@@ -267,7 +267,7 @@ const Contact = () => {
 
               {/* Studio Hours */}
               <div className="bg-slate-900/50 backdrop-blur-sm p-8 rounded-xl border border-slate-800/50">
-                <h3 className="text-2xl font-playfair font-bold mb-8 text-white">Studio Hours</h3>
+                <h3 className="text-2xl font-playfair font-bold mb-8 text-white">Active Hours</h3>
                 <div className="space-y-6">
                   <div className="flex justify-between items-center pb-4 border-b border-slate-800">
                     <span className="text-slate-400">Monday - Friday</span>
