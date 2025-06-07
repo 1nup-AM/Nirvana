@@ -203,6 +203,18 @@ const portfolioItems = [
     image: 'Brand/7.webp',
     title: 'Colourful Workspace',
   },
+  {
+    id: 34,
+    category: 'E-Commerce',
+    image: 'E-commerce/5.webp',
+    title: 'Saaris of Elegance',
+  },
+  {
+    id: 35,
+    category: 'E-Commerce',
+    image: 'E-commerce/6.webp',
+    title: 'Saaris of Elegance',
+  },
 ];
 
 const categories = ['All', ...new Set(portfolioItems.map(item => item.category))];
