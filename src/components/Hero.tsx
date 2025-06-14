@@ -4,9 +4,9 @@ import { useRef } from "react";
 
 const gridImages = [
 
-  "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80", //Headphone
+  "Gallery/4.webp", //hansraj
   "https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&q=80", //Clothes
-  "Fashion/keerti1.webp", //KEERTI
+  "Brand/7.webp", //KEERTI
   "E-commerce/3.webp", //Ring of Radiance
   "Brand/1.webp", //Urban Landscape
   "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80",
